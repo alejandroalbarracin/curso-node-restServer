@@ -83,11 +83,14 @@ const userDelete = async (req, res = response ) => {
 
     //eliminar por completo el usuario no es muy recomendable pierde integridad de lo que haya realizado dicho usuario 
     //const deleteUser = await User.findByIdAndDelete(id)
+   
 
     const inactivo = await User.findByIdAndUpdate(id, {stateUser: false})
 
+
     res.json({
-        inactivo
+        inactivo,
+        
     })
 }
 
