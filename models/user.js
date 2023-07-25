@@ -16,11 +16,11 @@ const UsuarioSchema = Schema({
     },
     identification:{
         type: String,
-        required: [true, 'El nit o cedula es requerido']
+        required: [false, 'El nit o cedula es requerido']
     },
     movile:{
         type: String,
-        required: [true, 'El numero celular es requerido']
+        required: [false, 'El numero celular es requerido']
     },
     img:{
         type: String,
