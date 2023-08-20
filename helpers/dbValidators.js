@@ -66,6 +66,17 @@ if(!validationProductId){
 }
 }
 
+//validar el id y colection  permitidas en este caso es el users y el productos 
+const allowedCollection = ( colection = '', colections = [] ) => {
+
+    const includeColection = colections.includes(colection);
+    if(!includeColection){
+      throw new Error(`la coleccion ${colection}  no esta incluida solo puedes hacer ${colections}`)
+    }
+
+    return true
+}
+
 
 
 
@@ -77,5 +88,6 @@ module.exports = {
     existsCategory,
     nameCategoryExists,
     existsProduct,
+    allowedCollection,
     
 }
